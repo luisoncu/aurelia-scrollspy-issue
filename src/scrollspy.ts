@@ -10,9 +10,15 @@ export class Scrollspy {
   }
 
   attached() {
-    $('#navbar-example2').scrollspy();
+    setTimeout(() => {
+      $('#spyscroll1').scrollspy({ target: '#navbar-example2' })
+    }, 500);
   }
 
   async activate(): Promise<void> {
+  }
+
+  detached() {
+    // $('#navbar-example2').scrollspy('dispose');
   }
 }
